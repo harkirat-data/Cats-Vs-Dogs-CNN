@@ -1,4 +1,4 @@
-# Cats vs Dogs — CNN Image Classification
+# Cats vs Dogs : CNN Image Classification
 
 ## 1. Project Overview
 
@@ -312,7 +312,7 @@ model.compile(
 
 ---
 
-# 9. Experiment 1 — Baseline CNN
+# 9. Experiment 1 : Baseline CNN
 
 The first CNN did **not** contain the later Batch Normalization and Dropout layers.
 
@@ -372,7 +372,7 @@ xychart-beta
 
 ---
 
-# 10. Experiment 2 — Batch Normalization + Dropout
+# 10. Experiment 2 : Batch Normalization + Dropout
 
 To address overfitting, the next architecture introduced:
 
@@ -389,7 +389,7 @@ The goal was to improve generalization without changing the overall CNN structur
 
 ---
 
-# 11. Regularized Model — Recorded 10-Epoch Run
+# 11. Regularized Model : Recorded 10-Epoch Run
 
 One recorded run of the Batch Normalization + Dropout model produced:
 
@@ -438,7 +438,7 @@ xychart-beta
 
 ---
 
-# 12. Experiment 3 — Early Stopping
+# 12. Experiment 3 : Early Stopping
 
 A later training run added an Early Stopping callback configured with:
 
@@ -641,25 +641,6 @@ The later use of:
 - Early Stopping
 
 was therefore motivated by the observed overfitting.
-
----
-
-# 18. Current Project Status
-
-At the point documented here:
-
-- Dataset loading: **Complete**
-- Image preprocessing: **Complete**
-- CNN implementation: **Complete**
-- GPU execution: **Verified**
-- Baseline training: **Complete**
-- Overfitting investigation: **Complete**
-- Batch Normalization: **Implemented**
-- Dropout: **Implemented**
-- Early Stopping: **Implemented**
-- Data augmentation: **Not implemented**
-- Clean held-out test evaluation: **Not demonstrated in the recorded notebook**
-- Further training: **Not performed**
 
 ---
 
@@ -872,23 +853,3 @@ flowchart TD
     J --> K[Early Stopping]
 ```
 
----
-
-## 23. Key Takeaways
-
-1. **The baseline CNN overfits heavily.**
-2. **The Flatten → Dense section is responsible for most of the 14.85M parameters.**
-3. **Batch Normalization and Dropout improved the recorded generalization behavior.**
-4. **The highest recorded validation accuracy was 82.84%.**
-5. **The early-stopping experiment identified a validation plateau after roughly six epochs.**
-6. **The recorded notebook does not contain a clean untouched test evaluation.**
-7. **No data augmentation was used in the recorded experiments.**
-8. **The T4 GPU was detected and verified, but training throughput varied considerably between runs.**
-
----
-
-## License / Attribution
-
-Dataset: Kaggle `salader/dogsvscats`
-
-Model implementation and experiments: This project notebook.
